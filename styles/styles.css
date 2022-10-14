@@ -132,6 +132,11 @@ body {
   line-height: 26px;
 }
 
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .advantage-item {
   width: 400px;
   text-align: center;
@@ -146,6 +151,10 @@ body {
 }
 
 .advantage-large {
+  width: 800px;
+}
+
+.advantage-dark-blue {
    color: #ffffff;
    background-color: #82B3D3 ;
 }
@@ -223,7 +232,6 @@ body {
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #82B3D3;
-  text-align: center;
 }
 
 .hotels-filters-title {
@@ -236,6 +244,9 @@ body {
   font-size: 16px;
   line-height: 21px;
   list-style: none;
+  display: flex;
+  width: 114px;
+  justify-content: space-between;
 }
 
 .control {
@@ -246,7 +257,11 @@ body {
 .filters-wrapper {
   width: 1060;
   margin: 35px 70px 70px;
+}
+
+.form-wrapper {
   display: flex;
+  width: 1060px;
 }
 
 .filter-title {
@@ -264,11 +279,35 @@ body {
   margin: 0 auto;
 }
 
+.catalog-controls {
+  display: flex;
+}
+
+.view-control-group {
+  display: flex;
+  width: 160px;
+  list-style: none;
+  margin-left: 70px;
+}
+
 .hotels-catalog-amount {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color: #000000;
+  margin-right: auto;
+}
+
+.hotel-card-list {
+  width: 1060px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hotel-card {
+  width: 340px;
+  background-color: #E6E6E6;
 }
 
 .hotel-card-raiting {
