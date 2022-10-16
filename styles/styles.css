@@ -361,8 +361,10 @@ body {
 }
 
 .hotel-card {
+  box-sizing: border-box;
+  padding: 20px;
   width: 340px;
-  background-color: #E6E6E6;
+  border: 1px solid #E6E6E6;
   margin-bottom: 20px;
 }
 
