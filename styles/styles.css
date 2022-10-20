@@ -419,18 +419,34 @@ body {
   width: 340px;
   border: 1px solid #E6E6E6;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotel-card-image {
   margin-bottom: 16px;
+  order: -1;
 }
 
 .hotel-card-title {
   margin: 0;
   padding: 0;
+  margin-bottom: 16px;
+}
+
+.hotel-card-type {
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-card-cost {
+  margin: 0;
+  padding: 0;
 }
 
 .hotel-card-raiting {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -441,6 +457,7 @@ body {
 .hotel-card-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 16px;
 }
 
 .pagination {
