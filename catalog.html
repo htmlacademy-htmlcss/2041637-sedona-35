@@ -11,7 +11,7 @@
         <h1 class="visually-hidden">Город Седона</h1>
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
-            <img src="images/logo.svg" width="140" height="70" alt="Логотип">
+            <span class="visually-hidden">Домой</span>
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -27,13 +27,11 @@
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <img src="images/search.svg" alt="Поиск" width="20" height="20">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <img src="images/heart.svg" alt="Избранное" width="20" height="20">
                 <span class="visually-hidden">Избранное</span>
               </a>
             </li>
@@ -67,19 +65,22 @@
               <ul class="filter-list">
                 <li class="filter-item">
                   <label class="control">
-                    <input type="checkbox" name="pool" class="control-input" checked>
+                    <input class="control-input visually-hidden" type="checkbox" name="pool"  checked>
+                    <span class="control-mark"></span>
                     Бассейн
                   </label>
                 </li>
                 <li class="filter-item">
                   <label class="control">
-                    <input type="checkbox" name="parking" class="control-input" checked>
+                    <input class="control-input visually-hidden" type="checkbox" name="parking"  checked>
+                    <span class="control-mark"></span>
                     Парковка
                   </label>
                 </li>
                 <li class="filter-item">
                   <label class="control">
-                    <input type="checkbox" name="wifi" class="control-input">
+                    <input class="control-input visually-hidden" type="checkbox" name="wifi" >
+                    <span class="control-mark"></span>
                     Wi-Fi
                   </label>
                 </li>
@@ -90,19 +91,22 @@
               <ul class="filter-list">
                 <li class="filter-item">
                   <label class="control">
-                    <input type="radio" name="housing-filter-group" class="control-input" value="hotel">
+                    <input class="control-input visually-hidden" type="radio" name="housing-filter-group" value="hotel">
+                    <span class="control-mark mark-radio"></span>
                     Гостиница
                   </label>
                 </li>
                 <li class="filter-item">
                   <label class="control">
-                    <input type="radio" name="housing-filter-group" class="control-input" value="motel">
+                    <input class="control-input visually-hidden" type="radio" name="housing-filter-group" value="motel">
+                    <span class="control-mark mark-radio"></span>
                     Мотель
                   </label>
                 </li>
                 <li class="filter-item">
                   <label class="control">
-                    <input type="radio" name="housing-filter-group" class="control-input" value="apartments">
+                    <input class="control-input visually-hidden" type="radio" name="housing-filter-group" value="apartments">
+                    <span class="control-mark mark-radio"></span>
                     Апартаменты
                   </label>
                 </li>
@@ -110,6 +114,22 @@
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-title">Стоимость, &#8381;:</legend>
+              <div class="range-inputs-wrapper">
+                <input class="field" type="text">
+                <input class="field" type="text">
+              </div>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="width: 226px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </fieldset>
             <div class="filter-buttons-wrapper">
               <button type="submit" class="button button-blue">Применить</button>
@@ -128,15 +148,15 @@
                 <option value="popular">Сначала популярные</option>
               </select>
               <ul class="view-control-group">
-                <li>
-                  <input type="radio" name="options-view-group" class="control-input" value="small-preview">
-                </li>
-                <li>
-                  <input type="radio" name="options-view-group" class="control-input" value="large-preview">
-                </li>
-                <li>
-                  <input type="radio" name="options-view-group" class="control-input" value="list">
-                </li>
+                <a class="view-control-toggle" href="#">
+                  <span class="visually-hidden">Показать сеткой</span>
+                </a>
+                <a class="view-control-toggle" href="#">
+                  <span class="visually-hidden">Показать развернутое описание</span>
+                </a>
+                <a class="view-control-toggle" href="#">
+                  <span class="visually-hidden">Показать таблицей</span>
+                </a>
               </ul>
             </div>
             <div class="hotel-card-list">
@@ -206,7 +226,9 @@
               <li class="pagination-item">
                 <a class="pagination-link" href="#">4</a>
               </li>
-              <li class="pagination-item pagination-disabled"> ... </li>
+              <li class="pagination-item">
+                <p class="pagination-link pagination-disabled"> ... </p>
+              </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>
               </li>
@@ -218,8 +240,8 @@
           <p class="subscription-title">Подпишитесь на рассылку</p>
           <p class="subscription-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form action="" class="subscription-form">
-            <input type="text" name="user-mail">
-            <button class="button button-blue" type="submit">Подписаться</button>
+            <input class="field" type="text" name="user-mail" placeholder="Ваш e-mail">
+            <button class="button button-blue button-subscription" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
