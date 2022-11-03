@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
@@ -45,6 +45,7 @@
       </header>
       <main class="main-index main-wrapper">
         <section class="welcome">
+          <h2 class="visually hidden">Добро пожаловать в Седону</h2>
           <div class="welcome-top">
             <img class="welcome-image" src="images/welcome.png" width="458" height="352" alt="Приветствие">
           </div>
@@ -65,6 +66,7 @@
             <p class="advantage-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </article>
           <article class="advantage-item advantage-large">
+            <h3 class="visually-hidden">Фотография</h3>
             <img class="advantage-image" src="images/photo-1.jpg" width="800" height="384" alt="Разделитель">
           </article>
           <article class="advantage-item">
@@ -80,6 +82,7 @@
             <p class="advantage-description">Большинство едет в Гранд Каньон и толпится там</p>
           </article>
           <article class="advantage-item advantage-large">
+            <h3 class="visually-hidden">Фотография</h3>
             <img class="advantage-image" src="images/photo-2.jpg" width="800" height="384" alt="Разделитель">
           </article>
           <article class="advantage-item advantage-dark-blue">
@@ -103,14 +106,14 @@
           <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
           <h3 class="seach-title">Заинтересовались?</h3>
           <p class="seach-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="button button-seach" href="./catalog.html">Поиск гостиницы в Седоне</a>
+          <button class="button button-seach">Поиск гостиницы в Седоне</button>
         </section>
         <section class="subscription">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <p class="subscription-title">Подпишитесь на рассылку</p>
           <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form action="" class="subscription-form">
-            <input class="field field-subscription" type="text" name="user-mail">
+          <form action="https://echo.htmlacademy.ru/" class="subscription-form" method="post">
+            <input class="field field-subscription" type="text" name="user-mail" required>
             <button class="button button-blue button-subscription" type="submit">Подписаться</button>
           </form>
         </section>
@@ -167,21 +170,21 @@
         <div class="modal">
           <h1 class="modal-title">Поиск гостиницы в седоне </h1>
           <button class="button modal-close"></button>
-          <form class="modal-form" action="#">
+          <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
             <label class="modal-label" for="modal-form-date-in">Дата заезда:</label>
             <div class="modal-date-wrapper">
-              <input class="field modal-form-date" type="text" id="modal-form-date-in" value="27 апреля 2020">
+              <input class="field modal-form-date" type="text" id="modal-form-date-in" name="from-date" value="27 апреля 2020" required>
               <p class="modal-assist-field assist-error">Мы не можем отправить вас в прошлое.</p>
             </div>
             <label class="modal-label" for="modal-form-date-out">Дата выезда:</label>
             <div class="modal-date-wrapper">
-              <input class="field modal-form-date" type="text" id="modal-form-date-out" value="1 сентября 2021">
+              <input class="field modal-form-date" type="text" id="modal-form-date-out" name="to-date" value="1 сентября 2021" required>
               <p class="modal-assist-field">На эти даты есть свободные номера. Пока есть.</p>
             </div>
             <label class="modal-label" for="modal-form-adult">Взрослые:</label>
             <div class="modal-wrapper">
               <button class="button button-math"></button>
-              <input class="field modal-form-adult" type="text" id="modal-form-adult" value="1">
+              <input class="field modal-form-adult" type="text" id="modal-form-adult" name="adult" value="1" required>
               <button class="button button-math"></button>
             </div>
             <span class="modal-label">
@@ -193,7 +196,7 @@
             </span>
             <div class="modal-wrapper">
               <button class="button button-math"></button>
-              <input class="field modal-form-children" type="text" id="modal-form-children" value="1">
+              <input class="field modal-form-children" type="text" id="modal-form-children" name="children" value="1" required>
               <button class="button button-math"></button>
             </div>
             <button class="button button-blue modal-submit" type="submit">Найти</button>
@@ -201,6 +204,6 @@
         </div>
       </div>
     </div>
+    <script src="scripts/scripts.js"></script>
   </body>
-  <script type="text/javascript" src="scripts/scripts.js"></script>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
@@ -93,21 +93,21 @@
               <ul class="filter-list">
                 <li class="filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="housing-filter-group" value="hotel">
+                    <input class="control-input visually-hidden" type="radio" name="housing-type" value="hotel">
                     <span class="control-mark mark-radio"></span>
                     Гостиница
                   </label>
                 </li>
                 <li class="filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="housing-filter-group" value="motel">
+                    <input class="control-input visually-hidden" type="radio" name="housing-type" value="motel">
                     <span class="control-mark mark-radio"></span>
                     Мотель
                   </label>
                 </li>
                 <li class="filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="housing-filter-group" value="apartments">
+                    <input class="control-input visually-hidden" type="radio" name="housing-type" value="apartments">
                     <span class="control-mark mark-radio"></span>
                     Апартаменты
                   </label>
@@ -117,8 +117,8 @@
             <fieldset class="filter-group">
               <legend class="filter-title">Стоимость, &#8381;:</legend>
               <div class="range-inputs-wrapper">
-                <input class="field" type="text">
-                <input class="field" type="text">
+                <input class="field" type="text" name="cost-min">
+                <input class="field" type="text" name="cost-max">
                 <span class="range-field-text">от</span>
                 <span class="range-field-text">до</span>
               </div>
@@ -152,15 +152,21 @@
                 <option value="popular">Сначала популярные</option>
               </select>
               <ul class="view-control-group">
-                <a class="view-control-toggle" href="#">
-                  <span class="visually-hidden">Показать сеткой</span>
-                </a>
-                <a class="view-control-toggle" href="#">
-                  <span class="visually-hidden">Показать развернутое описание</span>
-                </a>
-                <a class="view-control-toggle" href="#">
-                  <span class="visually-hidden">Показать таблицей</span>
-                </a>
+                <li class="view-control-item">
+                  <a class="view-control-toggle" href="#">
+                    <span class="visually-hidden">Показать сеткой</span>
+                  </a>
+                </li>
+                <li class="view-control-item">
+                  <a class="view-control-toggle" href="#">
+                    <span class="visually-hidden">Показать развернутое описание</span>
+                  </a>
+                </li>
+                <li class="view-control-item">
+                  <a class="view-control-toggle" href="#">
+                    <span class="visually-hidden">Показать таблицей</span>
+                  </a>
+                </li>
               </ul>
             </div>
             <div class="hotel-card-list">
@@ -176,7 +182,7 @@
                   <button class="button button-blue">В избранное</button>
                 </div>
                 <div class="hotel-card-wrapper">
-                  <div class="rating-wrapper"></div>
+                  <div class="rating-wrapper four-star"></div>
                   <p class="hotel-card-rating">Рейтинг: 8,5</p>
                 </div>
               </article>
@@ -191,7 +197,10 @@
                   <button class="button">Подробнее</button>
                   <button class="button button-green">В избранном</button>
                 </div>
-                <p class="hotel-card-rating">Рейтинг: 9,2</p>
+                <div class="hotel-card-wrapper">
+                  <div class="rating-wrapper four-star"></div>
+                  <p class="hotel-card-rating">Рейтинг: 9,2</p>
+                </div>
               </article>
               <article class="hotel-card">
                 <h3 class="hotel-card-title">Desert Quail Inn</h3>
@@ -204,7 +213,10 @@
                   <button class="button">Подробнее</button>
                   <button class="button button-blue">В избранное</button>
                 </div>
-                <p class="hotel-card-rating">Рейтинг: 6,9</p>
+                <div class="hotel-card-wrapper">
+                  <div class="rating-wrapper three-star"></div>
+                  <p class="hotel-card-rating">Рейтинг: 6,9</p>
+                </div>
               </article>
               <article class="hotel-card">
                 <h3 class="hotel-card-title">GreenTree Inn</h3>
@@ -217,7 +229,10 @@
                   <button class="button">Подробнее</button>
                   <button class="button button-blue">В избранное</button>
                 </div>
-                <p class="hotel-card-rating">Рейтинг: 5,0</p>
+                <div class="hotel-card-wrapper">
+                  <div class="rating-wrapper two-star"></div>
+                  <p class="hotel-card-rating">Рейтинг: 5,5</p>
+                </div>
               </article>
             </div>
             <ul class="pagination">
@@ -246,7 +261,7 @@
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <p class="subscription-title">Подпишитесь на рассылку</p>
           <p class="subscription-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
-          <form action="" class="subscription-form">
+          <form action="https://echo.htmlacademy.ru/" method="post" class="subscription-form">
             <input class="field field-subscription" type="text" name="user-mail" placeholder="Ваш e-mail">
             <button class="button button-blue button-subscription" type="submit">Подписаться</button>
           </form>
