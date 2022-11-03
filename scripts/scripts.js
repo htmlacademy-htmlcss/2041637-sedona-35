@@ -5,12 +5,12 @@ const wantHereButton = document.querySelector('#want-here-button');
 
 const showModalHandler = (evt) => {
   evt.preventDefault();
-  modalContainer.classList.remove('visually-hidden');
+  modalContainer.classList.remove('modal-container-closed');
 }
 
 const closeModalHandler = (evt) => {
   evt.preventDefault();
-  modalContainer.classList.add('visually-hidden');
+  modalContainer.classList.add('modal-container-closed');
 }
 
 
