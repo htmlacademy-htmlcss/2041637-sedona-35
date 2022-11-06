@@ -28,18 +28,18 @@
           </ul>
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
+              <a class="navigation-link navigation-seach" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
+              <a class="navigation-link navigation-favorites" href="#">
                 <span class="visually-hidden">Избранное</span>
-                <span class="favorites">12<span>
+                <span class="favorites">12</span>
               </a>
             </li>
             <li class="navigation-item">
-              <button class="button" id="want-here-button">Хочу сюда!</button>
+              <a class="button" href="#" id="want-here-button">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -51,14 +51,12 @@
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="./index.html">
-                  <img src="images/home.svg" width="12" height="12" alt="Разделитель">
+                  <span class="visually-hidden">На главную страницу</span>
                 </a>
               </li>
-              <li>
-                <img src="images/arrow.svg" width="6" height="10" alt="Разделитель">
-              </li>
+              <li class="breadcrumbs-item"></li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Гостиницы</a>
+                <a class="breadcrumbs-link" href="#">Гостиницы</a>
               </li>
             </ul>
           </div>
@@ -118,18 +116,20 @@
             <fieldset class="filter-group">
               <legend class="filter-title">Стоимость, &#8381;:</legend>
               <div class="range-inputs-wrapper">
-                <input class="field" type="text" name="cost-min">
-                <input class="field" type="text" name="cost-max">
+                <label class="visually-hidden" for="cost-min">Минимальная стоимость</label>
+                <input class="field" type="text" name="cost-min" value="0" id="cost-min">
+                <label class="visually-hidden" for="cost-max">Максимальная стоимость</label>
+                <input class="field" type="text" name="cost-max" value="9000" id="cost-max">
                 <span class="range-field-text">от</span>
                 <span class="range-field-text">до</span>
               </div>
               <div class="range">
                 <div class="range-scale">
                   <div class="range-bar" style="width: 226px">
-                    <button class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
                   </div>
@@ -179,8 +179,8 @@
                   <p class="hotel-card-cost">От 4000 Р</p>
                 </div>
                 <div class="hotel-card-wrapper">
-                  <button class="button">Подробнее</button>
-                  <button class="button button-blue">В избранное</button>
+                  <a class="button" href="#">Подробнее</a>
+                  <button class="button button-blue" type="button">В избранное</button>
                 </div>
                 <div class="hotel-card-wrapper">
                   <div class="rating-wrapper four-star"></div>
@@ -195,8 +195,8 @@
                   <p class="hotel-card-cost">От 5000 Р</p>
                 </div>
                 <div class="hotel-card-wrapper">
-                  <button class="button">Подробнее</button>
-                  <button class="button button-green">В избранном</button>
+                  <a class="button" href="#">Подробнее</a>
+                  <button class="button button-green" type="button">В избранном</button>
                 </div>
                 <div class="hotel-card-wrapper">
                   <div class="rating-wrapper four-star"></div>
@@ -211,8 +211,8 @@
                   <p class="hotel-card-cost">От 2500 Р</p>
                 </div>
                 <div class="hotel-card-wrapper">
-                  <button class="button">Подробнее</button>
-                  <button class="button button-blue">В избранное</button>
+                  <a class="button" href="#">Подробнее</a>
+                  <button class="button button-blue" type="button">В избранное</button>
                 </div>
                 <div class="hotel-card-wrapper">
                   <div class="rating-wrapper three-star"></div>
@@ -227,8 +227,8 @@
                   <p class="hotel-card-cost">От 1500 Р</p>
                 </div>
                 <div class="hotel-card-wrapper">
-                  <button class="button">Подробнее</button>
-                  <button class="button button-blue">В избранное</button>
+                  <a class="button" href="#">Подробнее</a>
+                  <button class="button button-blue" type="button">В избранное</button>
                 </div>
                 <div class="hotel-card-wrapper">
                   <div class="rating-wrapper two-star"></div>
@@ -250,7 +250,7 @@
                 <a class="pagination-link" href="#">4</a>
               </li>
               <li class="pagination-item">
-                <p class="pagination-link pagination-disabled"> ... </p>
+                <a class="pagination-link pagination-disabled" href="#"> ... </a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>
@@ -261,16 +261,17 @@
         <section class="subscription subscription-catalog">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <p class="subscription-title">Подпишитесь на рассылку</p>
-          <p class="subscription-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+          <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form action="https://echo.htmlacademy.ru/" method="post" class="subscription-form">
-            <input class="field field-subscription" type="text" name="user-mail" placeholder="Ваш e-mail" required>
+            <label class="visually-hidden" for="user-mail">Введите ваш e-mail чтобы подписаться</label>
+            <input class="field field-subscription" type="text" name="user-mail" placeholder="Ваш e-mail" id="user-mail" required>
             <button class="button button-blue button-subscription" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
       <footer class="page-footer">
         <div class="page-footer-wrapper">
-          <ul class="social-list">
+          <ul class="social-list" tabindex="0">
             <li class="social-list-item">
               <a href="https://vk.com/htmlacademy" class="social-list-button">
                 <svg class="social-icon" aria-hidden="true" focusable="false" width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -296,10 +297,8 @@
               </a>
             </li>
           </ul>
-          <p class="phone-wrapper">
-            <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          </p>
-          <p class="html-academy-wrapper">
+          <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <p class="html-academy-wrapper" tabindex="0">
             <a class="html-academy-link" href="https://htmlacademy.ru/">
               <svg class="html-academy-icon" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 13.2564V15.8564H2.5V13.2564H0Z"/>

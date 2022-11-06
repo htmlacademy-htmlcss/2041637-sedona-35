@@ -28,18 +28,18 @@
           </ul>
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
+              <a class="navigation-link navigation-seach" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
+              <a class="navigation-link navigation-favorites" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="favorites">12</span>
               </a>
             </li>
             <li class="navigation-item">
-              <button class="button" id="want-here-button">Хочу сюда!</button>
+              <a class="button" href="#" id="want-here-button">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -68,7 +68,7 @@
           </article>
           <article class="advantage-item advantage-large">
             <h3 class="visually-hidden">Фотография</h3>
-            <img class="advantage-image" src="images/photo-1.jpg" width="800" height="384" alt="Разделитель">
+            <img class="advantage-image" src="images/photo-1.jpg" width="800" height="384" alt="город Седона.">
           </article>
           <article class="advantage-item">
             <h3 class="advantage-title">Небольшая<br>площадь</h3>
@@ -84,35 +84,35 @@
           </article>
           <article class="advantage-item advantage-large">
             <h3 class="visually-hidden">Фотография</h3>
-            <img class="advantage-image" src="images/photo-2.jpg" width="800" height="384" alt="Разделитель">
+            <img class="advantage-image" src="images/photo-2.jpg" width="800" height="384" alt="мост Дьявола.">
           </article>
           <article class="advantage-item advantage-dark-blue">
-            <h3 class="advantage-title">Там есть мост дьявола</h3>
+            <h3 class="advantage-title">Там есть<br>мост дьявола</h3>
             <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </article>
           <article class="advantage-item advantage-blue advantage-picture">
             <h3 class="advantage-title">Жильё</h3>
-            <p class="advantage-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <p class="advantage-description">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
           </article>
           <article class="advantage-item advantage-picture">
             <h3 class="advantage-title">Еда</h3>
-            <p class="advantage-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <p class="advantage-description">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
           </article>
           <article class="advantage-item advantage-blue advantage-picture">
             <h3 class="advantage-title">Сувениры</h3>
-            <p class="advantage-description">Не только китайского, но и настоящего местного производства!</p>
+            <p class="advantage-description">Не только китайского,<br>но и настоящего местного<br>производства!</p>
           </article>
         </section>
         <section class="seach">
           <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
           <h3 class="seach-title">Заинтересовались?</h3>
           <p class="seach-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="button button-seach">Поиск гостиницы в Седоне</button>
+          <a class="button button-seach" href="#">Поиск гостиницы в Седоне</a>
         </section>
         <section class="subscription">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <p class="subscription-title">Подпишитесь на рассылку</p>
-          <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="subscription-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form action="https://echo.htmlacademy.ru/" class="subscription-form" method="post">
             <input class="field field-subscription" type="text" name="user-mail" placeholder="Ваш e-mail" required>
             <button class="button button-blue button-subscription" type="submit">Подписаться</button>
@@ -147,9 +147,7 @@
               </a>
             </li>
           </ul>
-          <p class="phone-wrapper">
-            <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          </p>
+          <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           <p class="html-academy-wrapper">
             <a class="html-academy-link" href="https://htmlacademy.ru/">
               <svg class="html-academy-icon" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -178,33 +176,41 @@
             <span class="visually-hidden">Закрыть окно</span>
           </button>
           <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
-            <label class="modal-label" for="modal-form-date-in">Дата заезда:</label>
+            <label class="modal-label" for="modal-form-date-in">Дата Заезда:</label>
             <div class="modal-date-wrapper">
               <input class="field modal-form-date" type="text" id="modal-form-date-in" name="from-date" value="27 апреля 2020" required>
               <p class="modal-assist-field assist-error">Мы не можем отправить вас в прошлое.</p>
             </div>
-            <label class="modal-label" for="modal-form-date-out">Дата выезда:</label>
+            <label class="modal-label" for="modal-form-date-out">Дата Выезда:</label>
             <div class="modal-date-wrapper">
               <input class="field modal-form-date" type="text" id="modal-form-date-out" name="to-date" value="1 сентября 2021" required>
               <p class="modal-assist-field">На эти даты есть свободные номера. Пока есть.</p>
             </div>
             <label class="modal-label" for="modal-form-adult">Взрослые:</label>
             <div class="modal-wrapper">
-              <button class="button button-math" type="button"></button>
-              <input class="field persions-field" type="number" id="modal-form-adult" name="adult" value="1" required>
-              <button class="button button-math" type="button"></button>
+              <button class="button button-math" type="button">
+                <span class="visually-hidden">Уменьшить число</span>
+              </button>
+              <input class="field persions-field" type="number" id="modal-form-adult" name="adult" value="2" required>
+              <button class="button button-math" type="button">
+                <span class="visually-hidden">Увеличить число</span>
+              </button>
             </div>
             <span class="modal-label">
               <label class="modal-label" for="modal-form-children">Дети:</label>
               <span class="tooltip">
-                <button class="tooltip-toggle" aria-labelledby="tooltip-label-date"></button>
+                <button class="tooltip-toggle" aria-labelledby="tooltip-label-date" type="button"></button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </span>
             </span>
             <div class="modal-wrapper">
-              <button class="button button-math" type="button"></button>
-              <input class="field persions-field" type="number" id="modal-form-children" name="children" value="1" required>
-              <button class="button button-math" type="button"></button>
+              <button class="button button-math" type="button">
+                <span class="visually-hidden">Уменьшить число</span>
+              </button>
+              <input class="field persions-field" type="number" id="modal-form-children" name="children" value="2" required>
+              <button class="button button-math" type="button">
+                <span class="visually-hidden">Увеличить число</span>
+              </button>
             </div>
             <button class="button button-blue modal-submit" type="submit">Найти</button>
           </form>
